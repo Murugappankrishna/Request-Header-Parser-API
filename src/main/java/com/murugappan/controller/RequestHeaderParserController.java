@@ -2,13 +2,11 @@ package com.murugappan.controller;
 
 import com.murugappan.DTO.ResponseDto;
 import jakarta.servlet.http.HttpServletRequest;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
+@CrossOrigin(origins = "*")
 public class RequestHeaderParserController {
     @GetMapping("/whoami")
     ResponseDto PasrseHeadder(HttpServletRequest request,
